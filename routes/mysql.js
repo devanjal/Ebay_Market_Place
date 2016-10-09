@@ -25,6 +25,7 @@ connection.query(sqlQuery, function(err,rows,field){
 		callback(err, rows);
 	}
 connection.end();
+	//comment
 });
 
 }
