@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/getUser.js"></script>
+<body ng-app="getUser" ng-controller="getUser">
+
+    <h1 align="center">Products</h1><br>
+    <a href="/profile">Profile</a><br>
+<a href="/logout">Logout</a>
+    <div>
+    <table border="1">
+    <tr class="row">
+
+        <td>Name</td>
+        <td>Description</td>
+        <td>Seller</td>
+        <td>Shipping Address</td>
+        <td>Cost($)</td>
+        <td>Quantity</td>
+    </tr>
+  <tr class="row" ng-repeat="test in test">
+    <!--<td>{{test.id}}</td>-->
+      <td>{{test.name}}</td>
+      <td>{{test.description}}</td>
+      <td>{{test.seller}}</td>
+      <td>{{test.shipping_add}}</td>
+      <td>{{test.cost}}</td>
+      <td>{{test.quantity}}</td>
+  </tr>
+
+</table></div>
+</body>
+</html>

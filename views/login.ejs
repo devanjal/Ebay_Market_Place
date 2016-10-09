@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/login.js"></script>
+<body ng-app="login" ng-controller="login">
+<div  ng-hide="invalid_login">
+	<h1 align="center">Login</h1>
+
+	<div class="col-md-5">
+
+
+<label>Email ID</label><input type="email" class="form-control"  name="email" ng-model='email'autofocus required>
+
+<label>Password</label><input type="password" class="form-control" name="phone" ng-model='password' required><br>
+
+
+
+	<input type="submit" class="btn btn-success" ng-click="submit();"
+						value="Sign In" /><br></div>
+	<div class= ng-hide="validlogin">
+		<strong>hello!!!{{var}}</strong>
+
+</div>
+</body>
+</html>

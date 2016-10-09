@@ -1,0 +1,39 @@
+<html>
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/product.js"></script>
+<%=age%>
+<body ng-app="product" ng-controller="product">
+<div class="col-md-2">
+    Product_name<input type="text" ng-model="product_name" class="form-control"><br>
+    description<input type="text" ng-model="desc" class="form-control"><br>
+    <!--seller<input type="text" ng-model="seller" class="form-control"><br>-->
+    Shipping Location <input type="text" ng-model="shipAdd" class="form-control"><br>
+    cost: <input type="text" ng-model="cost" class="form-control"><br>
+    quantity: <input type="text" ng-model="quantity" class="form-control"><br>
+    Today's date(dd/mm/yy): <input type="text" ng-model="date" class="form-control"><br>
+
+    <label>For Bidding :</label>
+    <select name="dest" id="dest" class="form-control" ng-model="bid"  ng-change="onDestChange(bid)"
+            ng-options="dest.name for dest in dest" required>
+
+    </select>
+<input type="submit" ng-click="submit()" class="btn btn-success" value="Add Product">
+    </div>
+<div class="col">
+<a href="/getAllUser">View Product</a> <a href="/logout">Logout</a>
+</div>
+</body>
+</html>
