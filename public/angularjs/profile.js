@@ -18,14 +18,14 @@ profile.controller('profile', function($scope, $http,$window) {
                 $scope.invalid_login = false;
                 $scope.validlogin = true;
                 alert("invalid Input")
-                $window.location.assign("/product");;
+                $window.location.assign("/profile");;
             }
             else
             {
                 $scope.invalid_login=true;
                 $scope.validlogin=false;
                 console.log("1");
-                $window.location.assign("/viewProfile");
+                $window.location.assign("/view_Profile");
 
                 alert("Profile Setup Successful!!!!")
 

@@ -15,6 +15,17 @@ exports.setProfile=function(req,res){
         }
         else{
 
+            var object_id="ep_id";
+            var description="Edit Profile"
+            var log_sql='insert into user_log(timestamp, user_id, object_id,description) values(now(),"'+req.session.user_id+'","'+object_id+'","'+description+'")';
+
+            mysql.fetchData(log_sql,function(err,result){
+                if(err){
+                    console.log("Log Error"+err);
+                }else{
+
+                }
+            });
 
             //console.log(fname);
             var json_response={"result" : result, "statuscode":200};
