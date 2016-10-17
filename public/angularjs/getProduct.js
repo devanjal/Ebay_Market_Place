@@ -17,8 +17,7 @@ getUser.controller('getUser', function($scope, $http,$window,$location) {
             });
 
     $scope.submit = function(req,res) {
-       // alert($scope.selectedQuantity);
-      //  alert($scope.item_id);
+
 
         //$scope.item_id
 
@@ -34,9 +33,7 @@ getUser.controller('getUser', function($scope, $http,$window,$location) {
         }).success(function(data) {
 
             $scope.test=data.statuscode;
-           // alert($scope.test);
-            //$window.location = '/profile';
-            //checking the response data for statusCode
+
             if (data.statuscode==401) {
 
                 $scope.invalid_login = true;
@@ -55,8 +52,7 @@ getUser.controller('getUser', function($scope, $http,$window,$location) {
 
             }
 
-            //Making a get call to the '/redirectToHomepage' API
-            //window.location.assign("/homepage");
+
         }).error(function(error) {
 //			$scope.validlogin = true;
 //			$scope.invalid_login = true;
