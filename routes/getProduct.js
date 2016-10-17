@@ -3,9 +3,6 @@ var ejs=require('ejs');
 var session = require('express-session');
 var object_id="vp_id";
 exports.getUser=function(req,res){
-    //if(!req.session){
-//var checkLogin='SELECT fname FROM ebay WHERE email="'+req.body.email+'" AND password="'+req.body.password+'"';
-    // var insert_items='insert into item values('+req.body.id+',"'+req.body.name+'","'+req.body.desc+'","'+req.body.seller+'","'+req.body.shipAdd+'","'+req.body.cost+'","'+req.body.quantity+'")';
     var insert_items='SELECT * FROM advertisement'
     //console.log(req.session.user);
 

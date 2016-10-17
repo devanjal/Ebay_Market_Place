@@ -7,8 +7,6 @@ var description="Logged on";
 exports.checkLogin=function(req,res){
 	var sess= req.session;
 
-	//var checkLogin='SELECT first_name,last_name, user_id FROM user WHERE email="'+req.body.email+'" AND password="'+hashedpassword+'"';
-	//var hashverify='select password from user where email="'+req.body.email+'"';
 	var checkLogin='select password,first_name,last_name,user_id,last_login from user where email="'+req.body.email+'"';
 	console.log(checkLogin);
 	mysql.fetchData(checkLogin,function(err,result){
