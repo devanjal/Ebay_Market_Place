@@ -18,22 +18,35 @@
 <script src="angularjs/login.js"></script>
 <body ng-app="login" ng-controller="login">
 <div  ng-hide="invalid_login">
-    <h1 align="center">Login</h1>
-
-    <div class="col-md-5">
-
-
-        <label>Email ID</label><input type="text" class="form-control"  name="email" ng-model='email'autofocus required>
-
-        <label>Password</label><input type="password" class="form-control" name="phone" ng-model='password' required><br>
+    <h1 align="center"><img align="center"
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg"
+                            alt="Ebay" class="logo" height="60" width="74"></h1>
 
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Log In</h3>
+                    </div>
+                    <div class="panel-body">
 
-        <input type="submit" class="btn btn-success" ng-click="submit();"
-               value="Sign In" /><br>
+                        <label>Email ID</label><input type="text" class="form-control"  name="email" ng-model='email'autofocus required>
 
-        <br><label>New User??</label><a href="/signup"> Create your account</a>
-    </div><br>
+                        <label>Password</label><input type="password" class="form-control" name="phone" ng-model='password' required><br>
+
+
+
+                        <input type="submit" class="btn btn-success" ng-click="submit();"
+                               value="Sign In" /><br>
+
+                        <br><label>New User??</label><a href="/signup"> Create your account</a>
+                    </div><br>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>

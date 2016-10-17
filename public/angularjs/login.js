@@ -18,7 +18,7 @@ login.controller('login', function($scope, $http,$window,$location) {
 		}).success(function(data) {
 
 			$scope.test=data.statuscode;
-			alert($scope.test);
+			//alert($scope.test);
 			//$window.location = '/profile';
 			//checking the response data for statusCode
 			if (data.statuscode==401) {
@@ -32,9 +32,9 @@ login.controller('login', function($scope, $http,$window,$location) {
 					$scope.invalid_login = true;
 					$scope.validlogin = false;
 					$scope.var=data.fname;
-					//alert("not ")
+
 					//	console.log("2");
-					$window.location = '/product';
+					$window.location = '/getproduct';
 
 				
 				}

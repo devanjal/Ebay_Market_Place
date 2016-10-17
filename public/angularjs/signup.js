@@ -17,8 +17,8 @@ signup.controller('signup', function($scope, $http,$window) {
 			if (data.statuscode==401) {
 				$scope.invalid_login = false;
 				$scope.validlogin = true;
-				alert("Email already in use... Try other email")
-				$window.location.assign("/signup");;
+				//alert("Email already in use... Try other email")
+				//$window.location.assign("/signup");;
 			}
 			else
 				{
